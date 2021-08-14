@@ -1,0 +1,9 @@
+<div class="comment-feed">
+    <button (click)="resetCommentFeed()">Reset comment feed</button>
+</div>
+
+<div class="comment-feed-list-container">
+    <li class="list-group-item" *ngFor='let comment of comments'>{{comment.text}}
+        <button type="button" class="btn btn-danger pull-right" (click)="deleteComment(comment.id)">Delete</button>
+    </li>
+</div>
